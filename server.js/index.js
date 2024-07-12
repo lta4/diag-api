@@ -17,6 +17,14 @@ app.use((req, res, next) => {
     next();
 });
 
+// app.use("login", (req,res) => {
+//     res.send({
+//         token: "test123"
+//     });
+// });
+
+// app.listen(8080, () => console.log("API is running on http://localhost:8080/login"));
+
 app.use("/request-type", (req, res, next) => {
     console.log("Request type: ", req.method);
     next();
