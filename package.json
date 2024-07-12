@@ -1,0 +1,25 @@
+{
+  "name": "diag-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "20.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "cd client && npm install && npm run build"
+  },
+  "proxy": "http://localhost:3001",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "latest-version": "^9.0.0",
+    "morgan": "^1.10.0",
+    "serve-index": "^1.9.1"
+  }
+}
