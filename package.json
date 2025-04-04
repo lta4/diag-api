@@ -12,7 +12,7 @@
   },
   "proxy": "http://localhost:3001",
   "keywords": [],
-  "author": "",
+  "author": "Andrew Arias",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

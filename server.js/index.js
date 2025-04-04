@@ -1,5 +1,6 @@
 require("dotenv").config();
-const { PORT, NODE_ENV = "development" } = process.env;
+// const { PORT, NODE_ENV = "development" } = process.env;
+const port = process.env.PORT || 3001;
 
 const express = require("express");
 const serveIndex = require("serve-index");
@@ -37,6 +38,11 @@ app.get("/", (req, res) => {
     res.send("Successful response!");
 });
 
-app.listen(PORT, () => {
-    console.log(`Server listening on ${PORT}`);
+// app.listen(PORT, () => {
+//     console.log(`Server listening on ${PORT}`);
+// });
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port} in
+${process.env.NODE_ENV} mode`);
 });
