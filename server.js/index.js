@@ -1,3 +1,4 @@
+//Trigger Heroku build: Oct 2, 2025
 require("dotenv").config();
 // const { PORT, NODE_ENV = "development" } = process.env;
 const port = process.env.PORT || 3001;
@@ -6,7 +7,6 @@ const express = require("express");
 const serveIndex = require("serve-index");
 const cors = require("cors");
 const morgan = require("morgan");
-//for herokue changes
 
 const app = express();
 
