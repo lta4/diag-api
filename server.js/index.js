@@ -1,4 +1,4 @@
-//Heroku build trigger: Oct 2, 2025
+//Heroku trigger, Oct 2, 2025
 require("dotenv").config();
 // const { PORT, NODE_ENV = "development" } = process.env;
 const port = process.env.PORT || 3001;
