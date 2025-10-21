@@ -40,6 +40,11 @@ app.get("/", (req, res) => {
     res.send("Successful response!");
 });
 
+// Simple health-check API endpoint for the frontend
+app.get('/api', (req, res) => {
+    res.json({ message: 'API is running' });
+});
+
 // app.listen(PORT, () => {
 //     console.log(`Server listening on ${PORT}`);
 // });
