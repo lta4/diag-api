@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "20.0.0"
+    "node": "24.15.0"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "cd client && npm install && npm run build"
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development node server.js",
+    "dev:watch": "cross-env NODE_ENV=development nodemon server.js"
   },
   "proxy": "http://localhost:3001",
   "keywords": [],
@@ -21,5 +22,9 @@
     "latest-version": "^9.0.0",
     "morgan": "^1.10.0",
     "serve-index": "^1.9.1"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.1.14"
   }
 }
