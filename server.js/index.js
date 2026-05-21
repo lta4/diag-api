@@ -11,7 +11,14 @@ const morgan = require("morgan");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: [
+        "https://www.itsdiagnostic.com",
+        "https://itsdiagnostic.com",
+        "http://localhost:3000"
+    ],
+    credentials: true
+}));
 
 app.use(morgan("tiny"));
 
