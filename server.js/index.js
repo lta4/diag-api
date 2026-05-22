@@ -11,14 +11,7 @@ const morgan = require("morgan");
 
 const app = express();
 
-app.use(cors({
-    origin: [
-        "https://www.itsdiagnostic.com",
-        "https://itsdiagnostic.com",
-        "http://localhost:3000"
-    ],
-    credentials: true
-}));
+app.use(cors());
 
 app.use(morgan("tiny"));
 
@@ -56,8 +49,7 @@ app.get('/api', (req, res) => {
 //     console.log(`Server listening on ${PORT}`);
 // });
 
-const mode = process.env.NODE_ENV || "development";
-
 app.listen(port, () => {
-    console.log(`Server is running on port ${port} in ${mode} mode`);
+    console.log(`Server is running on port ${port} in
+${process.env.NODE_ENV} mode`);
 });
